@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <title>{{ name }}</title>
+</head>
+<body class="container-fluid">
+    <header class="container-fluid bg-primary">
+        <div class="container">
+            <h1 class="text-white">
+                LOGO
+            </h1>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <!--
+        <div class="row">
+            <div class="col-4">
+                <a href="#">
+                    <img src="img/mac1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <div class="container-fluid">
+                        <img src="./img/">
+                    </div>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#">
+                    <img src="img/mac3.jpg" alt="">
+                </a>
+            </div>
+        </div>-->
+        <div class="row">
+            {% for item in products %}
+            <div class="col-4">
+                <a href="/products/{{item.name}}">
+                    <div>
+                        <img src="./img/{{item.img}}" alt="{{item.img}}">
+                    </div>
+                    <div>
+                        <h3>{{item.name}} : {{item.price}}$</h3>
+                        <a href="/products/{{item.name}}">Buy</a>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</body>
+</html>

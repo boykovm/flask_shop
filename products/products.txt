@@ -1,0 +1,3 @@
+('iMac silver', 999, 'iMac silver iMac silver iMac silver', 'mac1.jpg')
+('iMac black', 888, 'iMac black iMac black iMac black', 'mac2.jpg')
+('iMac rose', 777, 'iMac rose iMac rose iMac rose', 'mac3.jpg')
